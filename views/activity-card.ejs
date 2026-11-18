@@ -1,0 +1,7 @@
+<article class="activity-card">
+    <h3><%= activity.title %></h3>
+    <p><%= activity.date %> at <%= activity.startTime %></p>
+    <p><%= activity.location %> . <%= activity.duration %> minutes</p>
+    <p><%= activity.setting === 'indoor' ? 'Indoor' : 'Outdoor' %></p>
+    <p><%= activity.description %></p>
+</article>

@@ -7,5 +7,17 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p><a href="/activities/new">Post an Activity</a></p>
+    <section>
+      <h2>Activiities</h2>
+      <% if (activities.length === 0) { %>
+        <p>No activities posted yet.</p>
+        <% } %>
+        <div class="activity-grid">
+          <% for (var i = 0; i < activities.length; i++) { %>
+            <%- include('activity-card', { activity: activities[i] }) %>
+          <% } %>
+        </div>
+    </section>
   </body>
 </html>
