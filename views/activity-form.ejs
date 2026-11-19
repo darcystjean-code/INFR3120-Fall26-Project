@@ -6,6 +6,7 @@
     <title>Post an Activity</title>
 </head>
 <body>
+    <%- include('partials/header.ejs') %>
     <h1>Post an Activity</h1>
     <form action="/activities" method="post">
         <p>
@@ -44,5 +45,9 @@
         <button type="submit">Post Activity</button>
     </form>
     <p><a href="/">Back to the activity board</a></p>
+    <div class="fixed-bottom">
+      <!--Calls the footer partial-->
+      <%- include('partials/footer.ejs') %>
+    </div>
 </body>
 </html>

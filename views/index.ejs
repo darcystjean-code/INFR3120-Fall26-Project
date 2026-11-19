@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <%- include('partials/header.ejs') %>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <p><a href="/activities/new">Post an Activity</a></p>
@@ -19,5 +20,9 @@
           <% } %>
         </div>
     </section>
+    <div class="fixed-bottom">
+      <!--Calls the footer partial-->
+      <%- include('partials/footer.ejs') %>
+    </div>
   </body>
 </html>

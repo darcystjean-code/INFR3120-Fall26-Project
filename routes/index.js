@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Activity = require('../models/activity');
+var User = require('../models/user');
 
 router.get('/', async function(req, res, next) {
   try {
@@ -15,6 +16,7 @@ router.get('/', async function(req, res, next) {
 router.get('/activities/new', function(req, res) {
   res.render('activity-form');
 });
+
 router.post('/activities', async function(req, res, next) {
   try {
     var activity = new Activity({
@@ -32,4 +34,5 @@ router.post('/activities', async function(req, res, next) {
     next(error);
   }
 }); 
-module.exports = router;
+
+
