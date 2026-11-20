@@ -8,9 +8,9 @@
     <%- include('partials/header.ejs') %>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <p><a href="/activities/new">Post an Activity</a></p>
+    <a href="/activities/new" class="btn btn-primary">Post an Activity</a>
     <section>
-      <h2>Activiities</h2>
+      <h2>Activities</h2>
       <% if (activities.length === 0) { %>
         <p>No activities posted yet.</p>
         <% } %>
@@ -20,9 +20,9 @@
           <% } %>
         </div>
     </section>
-    <div class="fixed-bottom">
+  </body>
+  <div>
       <!--Calls the footer partial-->
       <%- include('partials/footer.ejs') %>
-    </div>
-  </body>
+  </div>
 </html>
